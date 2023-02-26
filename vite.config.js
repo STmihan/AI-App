@@ -2,6 +2,8 @@ import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import topLevelAwait from "vite-plugin-top-level-await";
 
+const PROD_BASE = '/AI-App/'
+
 // https://vitejs.dev/config/
 export default ({mode}) => {
     return defineConfig({
@@ -24,6 +26,6 @@ export default ({mode}) => {
                 }
             }
         },
-        base: mode === "production" ? '/cat-and-dogs-dl/' : '/'
+        base: mode === "production" ? PROD_BASE : '/'
     })
 }
